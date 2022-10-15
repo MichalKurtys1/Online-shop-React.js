@@ -1,0 +1,29 @@
+.conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* height: 65vh; */
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.text p {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.showMore p {
+  font-size: 13px;
+  color: #b1b1b1;
+}
+
+.wrap {
+  margin: 15px 0;
+}

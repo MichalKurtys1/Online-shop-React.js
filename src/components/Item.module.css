@@ -1,0 +1,52 @@
+.container {
+  width: 45vw;
+  height: 30vh;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.container img {
+  width: 45vw;
+  height: 45vw;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.name {
+  margin: 5px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.price {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.icon {
+  margin: 0 10px;
+}
+
+@media (max-height: 700px) {
+  .container {
+    height: 35vh;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    height: 30vh;
+  }
+  .box {
+    font-size: 14px;
+  }
+  .name {
+    font-size: 12px;
+  }
+}

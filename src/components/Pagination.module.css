@@ -1,0 +1,28 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.icons {
+  flex-basis: 20%;
+  color: #2a91a4;
+  font-size: 30px;
+}
+
+.icon {
+  margin-left: 5px;
+}
+
+.pages {
+  display: flex;
+}
+
+.pages .page {
+  margin: 5px;
+  background-color: #2a91a4;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}

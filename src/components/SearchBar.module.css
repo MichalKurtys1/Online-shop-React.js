@@ -1,0 +1,36 @@
+.search {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input[type="text"] {
+  border: solid 2px #2a91a4;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  min-width: 60vw;
+  min-height: 4vh;
+  padding: 5px;
+}
+
+.search input[type="text"]::placeholder {
+  color: #b6b6b6;
+  font-size: 20px;
+  line-height: 5vh;
+}
+
+.search button {
+  background-color: #2a91a4;
+  border: none;
+  border-radius: 10px;
+  min-width: 5vh;
+  min-height: 5vh;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.icon {
+  color: white;
+  font-size: 20px;
+}

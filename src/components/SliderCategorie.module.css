@@ -1,0 +1,48 @@
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.card {
+  flex-shrink: 0;
+  width: 30vw;
+  height: 18vh;
+}
+
+.card img {
+  width: 12vh;
+  height: 12vh;
+  border-radius: 60px;
+  object-fit: cover;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.text p {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.showMore p {
+  font-size: 13px;
+  color: #b1b1b1;
+}
+
+@media (max-width: 300px) {
+  .card {
+    width: 35vw;
+    height: 18vh;
+  }
+}

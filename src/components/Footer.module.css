@@ -1,0 +1,26 @@
+.footer {
+  background-color: #002c3d;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box .title {
+  color: white;
+  font-size: 30px;
+  border-bottom: dotted 2px white;
+  padding: 15px;
+  margin: 0;
+}
+
+.box p {
+  color: white;
+  font-size: 15px;
+  margin: 0;
+  padding: 8px;
+}
+
+.copyrights {
+  color: white;
+  font-size: 11px;
+}

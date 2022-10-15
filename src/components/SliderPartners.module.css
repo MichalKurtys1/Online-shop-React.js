@@ -1,0 +1,47 @@
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.container {
+  background-color: #2a91a4;
+}
+
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.card {
+  flex-shrink: 0;
+  width: 30vw;
+  height: 14vh;
+}
+
+.card img {
+  width: 12vh;
+  height: 12vh;
+  border-radius: 60px;
+  object-fit: cover;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px;
+  color: white;
+}
+
+.text p {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.showMore p {
+  font-size: 13px;
+  color: white;
+  font-weight: 300;
+}
