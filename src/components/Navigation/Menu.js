@@ -40,9 +40,9 @@ const Menu = (props) => {
         <button onClick={props.onClose} className={classes.btnClose}>
           <FontAwesomeIcon icon={faX} className={classes.icon} />
         </button>
-        <NavLink to="/">
-          <button className={classes.btnLogIn}>Zaloguj się</button>
-        </NavLink>
+        <button className={classes.btnLogIn} onClick={props.onLogin}>
+          Zaloguj się
+        </button>
         <div className={classes.categories}>
           <p className={classes.title}>Kategorie</p>
 

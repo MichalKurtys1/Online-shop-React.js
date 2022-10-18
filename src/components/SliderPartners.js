@@ -1,5 +1,4 @@
 import classes from "./SliderPartners.module.css";
-import { NavLink } from "react-router-dom";
 
 const SliderCaregorie = (props) => {
   return (

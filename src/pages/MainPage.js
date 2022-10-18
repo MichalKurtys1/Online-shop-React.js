@@ -1,6 +1,6 @@
 import React from "react";
 import Ad from "../components/Ad";
-import Navigation from "../components/Navigation";
+import Navigation from "../components/Navigation/Navigation";
 import SearchBar from "../components/SearchBar";
 import SliderCategorie from "../components/SliderCategorie";
 import SliderPartners from "../components/SliderPartners";
