@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faSlidersH } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+
 const SearchBar = (props) => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState("");

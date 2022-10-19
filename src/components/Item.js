@@ -21,7 +21,7 @@ const Item = (props) => {
         <img src={props.image} alt="" />
         <p className={classes.name}>{props.name}</p>
         <div className={classes.box}>
-          <p className={classes.price}>{props.price}</p>
+          <p className={classes.price}>{`${props.price} zł`}</p>
           <FontAwesomeIcon
             icon={icon}
             className={classes.icon}

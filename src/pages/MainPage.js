@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Ad from "../components/Ad";
 import Navigation from "../components/Navigation/Navigation";
 import SearchBar from "../components/SearchBar";
@@ -6,7 +6,9 @@ import SliderCategorie from "../components/SliderCategorie";
 import SliderPartners from "../components/SliderPartners";
 import ItemSection from "../components/ItemSection";
 import Footer from "../components/Footer";
-import itemList from "../store/list";
+
+import useHttp from "../hooks/use-http";
+import { getAllItems } from "../lib/api";
 
 import slider1 from "../Resource/categoria1.jpg";
 import slider2 from "../Resource/categoria2.jpeg";
@@ -37,15 +39,31 @@ const partnersList = [
 ];
 
 const MainPage = () => {
-  const sortedListByDate = itemList.sort(
-    (item1, item2) => item2.date - item1.date
-  );
-  const recentlyAddedList = sortedListByDate.slice(0, 4);
+  let recentlyAddedList = [];
+  let recomendedList = [];
 
-  const favoriteCategory = "Rolnictwo";
-  const recomendedList = itemList.filter(
-    (item) => item.category === favoriteCategory
-  );
+  const { sendRequest, status, data: loadedItems } = useHttp(getAllItems, true);
+
+  useEffect(() => {
+    sendRequest();
+  }, [sendRequest]);
+
+  let info;
+  if (status === "pending") {
+    info = <p>Wczytywanie</p>;
+  }
+
+  if (status === "completed") {
+    const sortedListByDate = loadedItems.sort(
+      (item1, item2) => item2.date - item1.date
+    );
+    recentlyAddedList = sortedListByDate.slice(0, 4);
+
+    const favoriteCategory = "Rolnictwo";
+    recomendedList = loadedItems.filter(
+      (item) => item.category === favoriteCategory
+    );
+  }
 
   return (
     <React.Fragment>
@@ -53,17 +71,23 @@ const MainPage = () => {
       <SearchBar />
       <Ad />
       <SliderCategorie items={categoriesList} title="Kategorie" />
-      <ItemSection
-        items={recentlyAddedList}
-        title="Niedawno dodane"
-        buttonTxt="Pokaż więcej"
-      />
+      {info}
+      {status === "completed" && (
+        <ItemSection
+          items={recentlyAddedList}
+          title="Niedawno dodane"
+          buttonTxt="Pokaż więcej"
+        />
+      )}
       <SliderPartners items={partnersList} title="Patnerzy" />
-      <ItemSection
-        items={recomendedList}
-        title="Wyróżnione"
-        buttonTxt="Pokaż więcej"
-      />
+      {info}
+      {status === "completed" && (
+        <ItemSection
+          items={recomendedList}
+          title="Wyróżnione"
+          buttonTxt="Pokaż więcej"
+        />
+      )}
       <Footer />
     </React.Fragment>
   );

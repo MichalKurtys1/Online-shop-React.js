@@ -1,6 +1,7 @@
 import Item from "./Item";
 import { NavLink } from "react-router-dom";
 import classes from "./ItemSection.module.css";
+import { imageList } from "../Resource/imageMenager";
 
 const ItemSection = (props) => {
   return (
@@ -18,10 +19,11 @@ const ItemSection = (props) => {
 
       <div className={classes.conteiner}>
         {props.items.map((item) => {
+          const image = imageList.find((image) => image.name === item.image);
           return (
             <Item
               key={item.name}
-              image={item.image}
+              image={image.image}
               name={item.name}
               price={item.price}
             />
