@@ -33,9 +33,9 @@
   margin: 0 10px;
 }
 
-@media (max-height: 700px) {
+@media (max-height: 750px) {
   .container {
-    height: 35vh;
+    height: 40vh;
   }
 }
 

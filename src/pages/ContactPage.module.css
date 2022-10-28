@@ -1,0 +1,64 @@
+.container .contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .contact p {
+  font-size: 32px;
+}
+
+.contact .box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 20vh;
+}
+
+.contact .box .circle {
+  position: relative;
+  flex-basis: 30vw;
+  height: 30vw;
+  border-radius: 100px;
+  background-color: #2a91a4;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #2a91a4;
+  margin-left: 10px;
+}
+
+.contact .box .circle p {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  color: white;
+}
+
+.contact .box .innerBox {
+  flex-basis: 70vw;
+}
+
+.contact .box .innerBox p {
+  font-size: 14px;
+  padding: 20px;
+  text-align: justify;
+}
+
+.contact .box .innerBox .telBox p {
+  padding: 0;
+}
+.box .innerBox .telBox .number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .box .innerBox .telBox .number {
+  padding: 0 20px;
+}
+.contact .box .innerBox .telBox .number .strong {
+  font-weight: bold;
+}

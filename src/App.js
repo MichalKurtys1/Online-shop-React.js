@@ -2,6 +2,9 @@ import "./App.css";
 import MainPage from "./pages/MainPage";
 import ResultsPage from "./pages/ResultsPage";
 import { Route, Routes } from "react-router-dom";
+import ContactPage from "./pages/ContactPage";
+import TermsOfUse from "./pages/TermsOfUsePage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 function App() {
   return (
     <div className="App">
@@ -15,6 +18,9 @@ function App() {
           path="/results/category/:categoryValue"
           element={<ResultsPage />}
         ></Route>
+        <Route path="/contact" element={<ContactPage />}></Route>
+        <Route path="/TermsOfUse" element={<TermsOfUse />}></Route>
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicyPage />}></Route>
       </Routes>
     </div>
   );

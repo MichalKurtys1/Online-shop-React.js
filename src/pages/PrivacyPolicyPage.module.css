@@ -1,0 +1,45 @@
+.container {
+  overflow: hidden;
+}
+
+.textBox strong {
+  text-align: left;
+  width: 100%;
+  display: block;
+  padding: 10px 0 10px 10px;
+  font-size: 20px;
+}
+
+.textBox .normalText {
+  text-align: justify;
+  padding: 10px;
+  margin: 0;
+}
+
+.imgBox {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 30vh;
+  background-image: url("../Resource/privacyPolicy.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+.imgBox p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 100%;
+  font-size: 40px;
+  color: white;
+}
+
+.imgBox .opacity {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+}

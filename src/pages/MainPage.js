@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Ad from "../components/Ad";
 import Navigation from "../components/Navigation/Navigation";
 import SearchBar from "../components/SearchBar";
@@ -55,7 +55,7 @@ const MainPage = () => {
 
   if (status === "completed") {
     const sortedListByDate = loadedItems.sort(
-      (item1, item2) => item2.date - item1.date
+      (item1, item2) => Date.parse(item2.date) - Date.parse(item1.date)
     );
     recentlyAddedList = sortedListByDate.slice(0, 4);
 

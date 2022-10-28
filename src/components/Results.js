@@ -43,6 +43,17 @@ const Results = () => {
       results = loadedItems.filter((item) =>
         item.name.toLowerCase().includes(params.searchValue.toLowerCase())
       );
+    } else if (
+      location.pathname.includes("/results/category/Niedawno dodane")
+    ) {
+      results = loadedItems.sort(
+        (item1, item2) => Date.parse(item2.date) - Date.parse(item1.date)
+      );
+    } else if (location.pathname.includes("/results/category/Wyróżnione")) {
+      const favoriteCategory = "Rolnictwo";
+      results = loadedItems.filter(
+        (item) => item.category === favoriteCategory
+      );
     } else if (location.pathname.includes("/results/category")) {
       results = loadedItems.filter(
         (item) => item.category === params.categoryValue

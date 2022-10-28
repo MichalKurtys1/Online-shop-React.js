@@ -8,17 +8,14 @@ const Footer = () => {
     <div className={classes.footer}>
       <div className={classes.box}>
         <p className={classes.title}>Support</p>
+        <NavLink to="/TermsOfUse" style={{ textDecoration: "none" }}>
+          <p>Warunki Korzystania</p>
+        </NavLink>
+        <NavLink to="/PrivacyPolicy" style={{ textDecoration: "none" }}>
+          <p>Polityka Prywatność</p>
+        </NavLink>
         <NavLink to="/FAQ" style={{ textDecoration: "none" }}>
           <p>FAQs</p>
-        </NavLink>
-        <NavLink to="/return" style={{ textDecoration: "none" }}>
-          <p>Zwroty</p>
-        </NavLink>
-        <NavLink to="/terms" style={{ textDecoration: "none" }}>
-          <p>Terms</p>
-        </NavLink>
-        <NavLink to="/privacy" style={{ textDecoration: "none" }}>
-          <p>Prywatność</p>
         </NavLink>
       </div>
       <div className={classes.box}>
