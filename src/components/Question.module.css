@@ -1,0 +1,19 @@
+.questionBox .question {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.questionBox .question .plus {
+  font-size: 70px;
+}
+
+.questionBox .question p {
+  margin-left: 10px;
+}
+
+.questionBox .anwser {
+  text-align: justify;
+  padding: 5px;
+}

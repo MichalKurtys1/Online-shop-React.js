@@ -1,0 +1,31 @@
+.container {
+  overflow: hidden;
+}
+
+.imgBox {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 30vh;
+  background-image: url("../Resource/FAQ.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.imgBox p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 100%;
+  font-size: 40px;
+  color: white;
+}
+
+.imgBox .opacity {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+}

@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import ContactPage from "./pages/ContactPage";
 import TermsOfUse from "./pages/TermsOfUsePage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import FAQPage from "./pages/FAQPage";
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />}></Route>
         <Route path="/TermsOfUse" element={<TermsOfUse />}></Route>
         <Route path="/PrivacyPolicy" element={<PrivacyPolicyPage />}></Route>
+        <Route path="/FAQ" element={<FAQPage />}></Route>
       </Routes>
     </div>
   );
