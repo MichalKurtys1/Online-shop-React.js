@@ -1,9 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlus,
-  faAngleRight,
-  faAngleDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import classes from "./QuestionCategory.module.css";
 import { useState } from "react";
 import Question from "./Question";

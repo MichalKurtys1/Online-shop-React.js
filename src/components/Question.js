@@ -1,9 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlus,
-  faAngleRight,
-  faAngleDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import classes from "./Question.module.css";
 import { useState } from "react";
 
@@ -18,11 +14,18 @@ const Question = (props) => {
     }
   };
 
+  let icon;
+  if (isShown === false) {
+    icon = faPlus;
+  } else {
+    icon = faMinus;
+  }
+
   return (
     <div className={classes.questionBox}>
       <div className={classes.question}>
         <FontAwesomeIcon
-          icon={faPlus}
+          icon={icon}
           className={classes.plusIcon}
           onClick={clickHandler}
         />

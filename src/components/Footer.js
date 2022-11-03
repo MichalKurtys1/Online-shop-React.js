@@ -20,13 +20,13 @@ const Footer = () => {
       </div>
       <div className={classes.box}>
         <p className={classes.title}>Sitemap</p>
-        <NavLink to="/contact" style={{ textDecoration: "none" }}>
+        <NavLink to="/Kontakt" style={{ textDecoration: "none" }}>
           <p>Kontakt</p>
         </NavLink>
         <NavLink to="/profile" style={{ textDecoration: "none" }}>
           <p>Profil</p>
         </NavLink>
-        <NavLink to="/about-us" style={{ textDecoration: "none" }}>
+        <NavLink to="/O nas" style={{ textDecoration: "none" }}>
           <p>O nas</p>
         </NavLink>
       </div>

@@ -1,0 +1,97 @@
+.container {
+  overflow: hidden;
+}
+
+.imgBox {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 30vh;
+  background-image: url("../Resource/aboutUs.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.imgBox p.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 100%;
+  font-size: 40px;
+  color: white;
+}
+
+.imgBox .opacity {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.imgBox .showMore {
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 14px;
+  color: white;
+}
+
+.imgBox .showMore .showMoreText {
+  margin: 0;
+  padding: 5px;
+}
+
+.imgBox .showMore .showMoreIcon {
+  padding: 5px;
+}
+
+.textBox {
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  text-align: justify;
+}
+
+.teamContainer .title p {
+  width: 100%;
+  color: white;
+  background-color: #2a91a4;
+  font-size: 30px;
+  text-align: center;
+  padding: 15px;
+  margin: 40px 0;
+}
+
+.teamContainer .teamBox {
+  display: flex;
+  align-items: center;
+}
+
+.teamContainer .teamBox img {
+  width: 40vw;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.teamBox .text .name {
+  font-weight: bold;
+  font-size: 26px;
+  margin: 0;
+}
+
+.teamBox .text .specialization {
+  font-size: 20px;
+  margin: 0;
+}
+
+.teamBox .text .description {
+  text-align: justify;
+  font-size: 15px;
+  padding: 0 15px;
+}
