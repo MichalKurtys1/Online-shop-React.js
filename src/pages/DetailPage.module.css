@@ -1,0 +1,125 @@
+.container .detailsBox {
+  border-top: 1px rgb(185, 185, 185) solid;
+  border-bottom: 1px rgb(185, 185, 185) solid;
+}
+
+.detailsBox .links a {
+  color: black;
+  text-decoration: none;
+}
+
+.detailsBox p.links {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.detailsBox h1 {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+.detailsBox img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.detailsBox .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.detailsBox .details .price {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.detailsBox .details .leftBox {
+  display: flex;
+  align-items: center;
+}
+
+.detailsBox .details .leftBox p {
+  margin-left: 5px;
+}
+
+.detailsBox .details .heartIcon {
+  margin-left: 25px;
+  font-size: 26px;
+}
+
+.detailsBox .buttons button {
+  border: none;
+  background-color: #2a91a4;
+  width: 60%;
+  height: 7vh;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.detailsBox .buttons {
+  margin-bottom: 20px;
+}
+
+.descriptionBox {
+  margin-bottom: 20px;
+}
+
+.descriptionBox p.title {
+  text-align: left;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.descriptionBox p.description {
+  text-align: justify;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  overflow: hidden;
+}
+
+.descriptionBox button {
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.userDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.userDetails img {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 100px;
+}
+
+.userDetails .details p.name {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+}
+
+.userDetails .details .dataBox {
+  display: flex;
+}
+
+.userDetails .details .dataBox p {
+  font-size: 13px;
+  margin: 5px;
+}

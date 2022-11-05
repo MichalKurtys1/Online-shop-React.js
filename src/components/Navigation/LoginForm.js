@@ -3,10 +3,11 @@ import { faLock, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Input from "../ReUsed/Input";
 import classes from "./FormStyles.module.css";
-import usersList from "../../store/usersList";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const LoginForm = (props) => {
+  const navigation = useNavigate();
   const [loginInputValue, setLoginInputValue] = useState("");
   const [passInputValue, setPassInputValue] = useState("");
   const [dataIsCorrect, setDataIsCorrect] = useState(true);
@@ -14,20 +15,39 @@ const LoginForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const results = usersList.filter(
-      (user) =>
-        user.login === loginInputValue && user.password === passInputValue
-    );
-
-    if (results.length > 0) {
-      setDataIsCorrect(true);
-      setLoginInputValue("");
-      setPassInputValue("");
-
-      // set in local storage
-    } else {
-      setDataIsCorrect(false);
-    }
+    fetch(
+      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAxRGxcoq7cdVg8o3h9pAAlAoaELKy3nJ8",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          email: loginInputValue,
+          password: passInputValue,
+          returnSecureToken: true,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return res.json().then((data) => {
+            setDataIsCorrect(false);
+            console.log(data);
+            throw new Error("Authentication Failed!");
+          });
+        }
+      })
+      .then((data) => {
+        localStorage.setItem("token", data.idToken);
+        localStorage.setItem("isLoggedIn", true);
+        props.onClose();
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   };
 
   const changeLoginHandler = (event) => {

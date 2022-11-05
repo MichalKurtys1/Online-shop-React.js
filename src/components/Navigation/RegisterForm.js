@@ -43,6 +43,30 @@ const RegisterForm = (props) => {
       setPassRepeatIsCorrect(true);
     }
 
+    fetch(
+      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAxRGxcoq7cdVg8o3h9pAAlAoaELKy3nJ8",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          email: emailInputValue,
+          password: passInputValue,
+          returnSecureToken: true,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    ).then((res) => {
+      if (res.ok) {
+        props.onClose();
+      } else {
+        return res.json().then((data) => {
+          setPassIsCorrect(false);
+          console.log(data);
+        });
+      }
+    });
+
     setEmailInputValue("");
     setPassInputValue("");
     setPassRepeatInputValue("");
@@ -79,7 +103,7 @@ const RegisterForm = (props) => {
           <div className={classes.error}>
             <p className={classes.errorMessage}>
               Proszę podać poprawne hasło. Powinno ono zawierać przynajmniej
-              jedną wielką literę i cyfrę oraz mieć przynajmniej 8 znaków.
+              jedną wielką literę i cyfrę oraz mieć przynajmniej 6 znaków.
             </p>
           </div>
         )}

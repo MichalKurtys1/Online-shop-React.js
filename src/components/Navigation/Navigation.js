@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./Navigation.module.css";
 import logo from "../../Resource/Logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,27 +7,43 @@ import {
   faShoppingCart,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Menu from "./Menu";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import ForgetPassword from "./ForgetPassword";
 
-const Navigation = () => {
+const Navigation = (props) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [isInProfile, setIsInProfile] = useState(false);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [loginIsOpen, setLoginIsOpen] = useState(false);
   const [registerIsOpen, setRegisterIsOpen] = useState(false);
   const [forgetPassIsOpen, setForgetPassIsOpen] = useState(false);
 
-  const showMenu = () => {
-    if (menuIsOpen) {
-      setMenuIsOpen(false);
-      return;
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn === "true") {
+      setIsInProfile(true);
+    } else {
+      setIsInProfile(false);
     }
-    setMenuIsOpen(true);
-  };
+  }, []);
 
   const showLogin = () => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn === "true") {
+      setIsInProfile(true);
+    } else {
+      setIsInProfile(false);
+    }
+
+    if (isInProfile) {
+      navigate("/Profil");
+      return;
+    }
+
     if (forgetPassIsOpen) {
       setForgetPassIsOpen(false);
     }
@@ -42,6 +58,14 @@ const Navigation = () => {
       return;
     }
     setLoginIsOpen(true);
+  };
+
+  const showMenu = () => {
+    if (menuIsOpen) {
+      setMenuIsOpen(false);
+      return;
+    }
+    setMenuIsOpen(true);
   };
 
   const showRegister = () => {
@@ -82,19 +106,18 @@ const Navigation = () => {
         </button>
         <FontAwesomeIcon icon={faShoppingCart} className={classes.icons} />
       </div>
-
       {menuIsOpen && <Menu onClose={showMenu} onLogin={showLogin} />}
-      {loginIsOpen && (
+      {loginIsOpen && !isInProfile && (
         <LoginForm
           onClose={showLogin}
           onOpenRegister={showRegister}
           onOpenForgetPass={showForgetPass}
         />
       )}
-      {registerIsOpen && (
+      {registerIsOpen && !isInProfile && (
         <RegisterForm onClose={showRegister} onOpenLogin={showLogin} />
       )}
-      {forgetPassIsOpen && (
+      {forgetPassIsOpen && !isInProfile && (
         <ForgetPassword onClose={showForgetPass} onOpenLogin={showLogin} />
       )}
     </div>

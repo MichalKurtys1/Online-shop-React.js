@@ -7,7 +7,16 @@ import TermsOfUse from "./pages/TermsOfUsePage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import FAQPage from "./pages/FAQPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import DetailPage from "./pages/DetailPage";
+import ProfilePage from "./pages/ProfilePage";
+import { useEffect } from "react";
 function App() {
+  useEffect(() => {
+    if (localStorage.length === 0) {
+      localStorage.setItem("isLoggedIn", false);
+    }
+  }, []);
+
   return (
     <div className="App">
       <Routes>
@@ -20,6 +29,8 @@ function App() {
           path="/results/category/:categoryValue"
           element={<ResultsPage />}
         ></Route>
+        <Route path="/details/:itemId" element={<DetailPage />}></Route>
+        <Route path="/Profil" element={<ProfilePage />}></Route>
         <Route path="/Kontakt" element={<ContactPage />}></Route>
         <Route path="/TermsOfUse" element={<TermsOfUse />}></Route>
         <Route path="/PrivacyPolicy" element={<PrivacyPolicyPage />}></Route>

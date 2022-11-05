@@ -21,7 +21,6 @@ const ForgetPassword = (props) => {
     }
     setEmailIsCorrect(true);
     setEmailInputValue("");
-    // send
   };
 
   const changeEmailHandler = (event) => {

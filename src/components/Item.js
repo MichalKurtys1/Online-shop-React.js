@@ -16,7 +16,10 @@ const Item = (props) => {
   };
 
   return (
-    <NavLink to="/" style={{ color: "black", textDecoration: "none" }}>
+    <NavLink
+      to={`/details/${props.id}`}
+      style={{ color: "black", textDecoration: "none" }}
+    >
       <div className={classes.container}>
         <img src={props.image} alt="" />
         <p className={classes.name}>{props.name}</p>
