@@ -9,12 +9,12 @@ import {
   faCouch,
   faPhone,
   faPeopleGroup,
-  faUser,
   faBook,
   faStar,
   faCalendarAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const categories = [
   { icon: faCar, text: "Motoryzacja" },
@@ -30,19 +30,45 @@ const categories = [
 const sitemap = [
   { icon: faPhone, text: "Kontakt" },
   { icon: faPeopleGroup, text: "O nas" },
-  { icon: faUser, text: "Profil" },
 ];
 
 const Menu = (props) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn === "true") {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, []);
+
+  const profilHandler = () => {
+    navigate("/Profil");
+  };
+
   return (
     <div className={classes.container}>
       <div className={classes.menu}>
         <button onClick={props.onClose} className={classes.btnClose}>
           <FontAwesomeIcon icon={faX} className={classes.icon} />
         </button>
-        <button className={classes.btnLogIn} onClick={props.onLogin}>
-          Zaloguj się
-        </button>
+        {!isLoggedIn && (
+          <button className={classes.btnLogIn} onClick={props.onLogin}>
+            Zaloguj się
+          </button>
+        )}
+        {isLoggedIn && (
+          <button
+            className={classes.btnLogIn}
+            onClick={profilHandler}
+            style={{ fontWeight: "bold" }}
+          >
+            Stwórz Ogłoszenie
+          </button>
+        )}
         <div className={classes.categories}>
           <p className={classes.title}>Kategorie</p>
 

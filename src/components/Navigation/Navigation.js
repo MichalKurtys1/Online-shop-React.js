@@ -7,14 +7,13 @@ import {
   faShoppingCart,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Menu from "./Menu";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import ForgetPassword from "./ForgetPassword";
 
 const Navigation = (props) => {
-  const location = useLocation();
   const navigate = useNavigate();
   const [isInProfile, setIsInProfile] = useState(false);
   const [menuIsOpen, setMenuIsOpen] = useState(false);

@@ -58,7 +58,7 @@ const AboutUsPage = () => {
             <p>Nasz zespół</p>
           </div>
           <div className={classes.teamBox}>
-            <img src={img1} />
+            <img src={img1} alt="zdjęcie" />
             <div className={classes.text}>
               <p className={classes.name}>Janusz Kowalski</p>
               <p className={classes.specialization}>UI Designer</p>
@@ -79,12 +79,12 @@ const AboutUsPage = () => {
                 nadzór nad pracownikami.
               </p>
             </div>
-            <img src={img2} />
+            <img src={img2} alt="zdjęcie" />
           </div>
         </div>
         <div className={classes.teamContainer}>
           <div className={classes.teamBox}>
-            <img src={img3} />
+            <img src={img3} alt="zdjęcie" />
             <div className={classes.text}>
               <p className={classes.name}>Andrzej Nowak</p>
               <p className={classes.specialization}>Marketing</p>
@@ -106,7 +106,7 @@ const AboutUsPage = () => {
                 Bartoszem.
               </p>
             </div>
-            <img src={img4} />
+            <img src={img4} alt="zdjęcie" />
           </div>
         </div>
       </div>

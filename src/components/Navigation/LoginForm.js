@@ -4,10 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Input from "../ReUsed/Input";
 import classes from "./FormStyles.module.css";
 import { useState } from "react";
-import { useNavigate } from "react-router";
 
 const LoginForm = (props) => {
-  const navigation = useNavigate();
   const [loginInputValue, setLoginInputValue] = useState("");
   const [passInputValue, setPassInputValue] = useState("");
   const [dataIsCorrect, setDataIsCorrect] = useState(true);

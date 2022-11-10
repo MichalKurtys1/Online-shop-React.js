@@ -23,9 +23,6 @@ const Footer = () => {
         <NavLink to="/Kontakt" style={{ textDecoration: "none" }}>
           <p>Kontakt</p>
         </NavLink>
-        <NavLink to="/profile" style={{ textDecoration: "none" }}>
-          <p>Profil</p>
-        </NavLink>
         <NavLink to="/O nas" style={{ textDecoration: "none" }}>
           <p>O nas</p>
         </NavLink>
