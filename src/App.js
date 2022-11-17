@@ -1,7 +1,7 @@
 import "./App.css";
 import MainPage from "./pages/MainPage";
 import ResultsPage from "./pages/ResultsPage";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import ContactPage from "./pages/ContactPage";
 import TermsOfUse from "./pages/TermsOfUsePage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
@@ -13,7 +13,11 @@ import ChangePasswordPage from "./pages/ChangePasswordPage";
 import ChangeEmailPage from "./pages/ChangeEmailPage";
 import ContactDataPage from "./pages/ContactDataPage";
 import CreateOfferPage from "./pages/CreateOfferPage";
+import { useSelector } from "react-redux";
+
 function App() {
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+
   return (
     <div className="App">
       <Routes>
@@ -31,12 +35,13 @@ function App() {
         <Route path="/email-change" element={<ChangeEmailPage />}></Route>
         <Route path="/contact-details" element={<ContactDataPage />}></Route>
         <Route path="/create-offer" element={<CreateOfferPage />}></Route>
-        <Route path="/Profil" element={<ProfilePage />}></Route>
         <Route path="/Kontakt" element={<ContactPage />}></Route>
         <Route path="/TermsOfUse" element={<TermsOfUse />}></Route>
         <Route path="/PrivacyPolicy" element={<PrivacyPolicyPage />}></Route>
         <Route path="/FAQ" element={<FAQPage />}></Route>
         <Route path="/O nas" element={<AboutUsPage />}></Route>
+        {isLoggedIn && <Route path="/Profil" element={<ProfilePage />}></Route>}
+        {!isLoggedIn && <Route path="*" element={<Navigate to="/" />} />}
       </Routes>
     </div>
   );

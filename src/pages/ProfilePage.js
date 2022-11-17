@@ -10,13 +10,15 @@ import {
   faLock,
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { authActions } from "../store";
 
 const ProfilePage = () => {
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
   const logoutHandler = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("expirationTime");
+    dispatch(authActions.logOut());
     navigate("/");
   };
 

@@ -11,7 +11,6 @@ import Input from "../components/ReUsed/Input";
 import TextArea from "../components/ReUsed/TextArea";
 import classes from "./CreateOfferPage.module.css";
 import DropDownList from "../components/ReUsed/DropDownList";
-import { saveAs } from "file-saver";
 import { useNavigate } from "react-router";
 
 const categories = [

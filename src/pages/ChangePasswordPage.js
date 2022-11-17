@@ -1,10 +1,16 @@
 import { faLock, faLockOpen } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 import Navigation from "../components/Navigation/Navigation";
 import Input from "../components/ReUsed/Input";
+import { authActions } from "../store";
 import classes from "./ChangePasswordPage.module.css";
 
 const ChangePasswordPage = () => {
+  const token = useSelector((state) => state.auth.token);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [error, setError] = useState(false);
   const [newPasswordIsCorrect, setNewPasswordIsCorrect] = useState(true);
   const [oldPasswordIsCorrect, setOldPasswordIsCorrect] = useState(true);
@@ -43,16 +49,12 @@ const ChangePasswordPage = () => {
     setNewPasswordIsCorrect(true);
     setOldPasswordIsCorrect(true);
 
-    setNewPasswordInputValue("");
-    setOldPasswordInputValue("");
-    setOldPasswordRepeatInputValue("");
-
     fetch(
       "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyAxRGxcoq7cdVg8o3h9pAAlAoaELKy3nJ8",
       {
         method: "POST",
         body: JSON.stringify({
-          idToken: localStorage.getItem("token"),
+          idToken: token,
           password: newPasswordInputValue,
           returnSecureToken: true,
         }),
@@ -73,9 +75,8 @@ const ChangePasswordPage = () => {
         }
       })
       .then((data) => {
-        console.log(data);
-        localStorage.setItem("token", data.idToken);
-        localStorage.setItem("isLoggedIn", true);
+        dispatch(authActions.logIn(data.idToken));
+        navigate("/Profil");
       })
       .catch((err) => {
         setError(true);

@@ -12,9 +12,12 @@ import Menu from "./Menu";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import ForgetPassword from "./ForgetPassword";
+import { useSelector } from "react-redux";
 
-const Navigation = (props) => {
+const Navigation = () => {
   const navigate = useNavigate();
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+
   const [isInProfile, setIsInProfile] = useState(false);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [loginIsOpen, setLoginIsOpen] = useState(false);
@@ -22,17 +25,15 @@ const Navigation = (props) => {
   const [forgetPassIsOpen, setForgetPassIsOpen] = useState(false);
 
   useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn === "true") {
+    if (isLoggedIn) {
       setIsInProfile(true);
     } else {
       setIsInProfile(false);
     }
-  }, []);
+  }, [isLoggedIn]);
 
   const showLogin = () => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn === "true") {
+    if (isLoggedIn) {
       setIsInProfile(true);
     } else {
       setIsInProfile(false);

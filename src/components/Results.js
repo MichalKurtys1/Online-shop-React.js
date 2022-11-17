@@ -1,6 +1,5 @@
 import classes from "./Results.module.css";
 import Item from "./Item";
-import Pagination from "./Pagination";
 import { useLocation, useParams } from "react-router";
 import { useEffect } from "react";
 import useHttp from "../hooks/use-http";

@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Input from "../ReUsed/Input";
 import classes from "./FormStyles.module.css";
 import { useState } from "react";
-import { init } from "../../hooks/auto-logout";
+import { useDispatch } from "react-redux";
+import { authActions } from "../../store";
 
 const LoginForm = (props) => {
+  const dispatch = useDispatch();
   const [loginInputValue, setLoginInputValue] = useState("");
   const [passInputValue, setPassInputValue] = useState("");
   const [dataIsCorrect, setDataIsCorrect] = useState(true);
@@ -40,15 +42,31 @@ const LoginForm = (props) => {
         }
       })
       .then((data) => {
-        localStorage.setItem("token", data.idToken);
-        localStorage.setItem("isLoggedIn", true);
-        localStorage.setItem("expirationTime", 3600000);
-        init();
+        const expirationTime = new Date(
+          new Date().getTime() + +data.expiresIn * 1000
+        );
+        dispatch(authActions.logIn(data.idToken));
+        autoLogoutHandler(expirationTime);
         props.onClose();
       })
       .catch((err) => {
         console.log(err.message);
       });
+  };
+
+  const autoLogoutCalculator = (expirationTime) => {
+    const currentTime = new Date().getTime();
+    const adjExpirationTime = new Date(expirationTime).getTime();
+
+    const remainingDuration = adjExpirationTime - currentTime;
+    return remainingDuration;
+  };
+
+  const autoLogoutHandler = (expirationTime) => {
+    const remainingDuration = autoLogoutCalculator(expirationTime);
+    setTimeout(() => {
+      dispatch(authActions.logOut());
+    }, remainingDuration);
   };
 
   const changeLoginHandler = (event) => {

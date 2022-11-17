@@ -1,4 +1,4 @@
-import { faBars, faCheck, faPenFancy } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faPenFancy } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import classes from "./ContactDataRecord.module.css";

@@ -2,6 +2,7 @@ import { useState } from "react";
 import classes from "./DropDownItem.module.css";
 
 const DropDownItem = (props) => {
+  // eslint-disable-next-line
   const [itemName, setItemName] = useState(props.name);
   const [isClicked, setIsClicked] = useState(false);
 
