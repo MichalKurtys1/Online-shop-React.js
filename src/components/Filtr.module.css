@@ -1,0 +1,64 @@
+.filtr {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.filtr .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filtr .filterBox {
+  display: flex;
+  align-items: center;
+}
+
+.filtr .filterBox .category {
+  width: 60vw;
+}
+
+.filterBox .category .selectedCategory {
+  background-color: #2a91a4;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 10px;
+  color: white;
+}
+.filterBox .category .selectedCategory p {
+  margin: 0;
+}
+
+.filtr .filterBox p {
+  font-size: 20px;
+}
+
+.filtr .filterBox .iconCancel {
+  color: grey;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.filtr .filterBox .icon {
+  font-size: 20px;
+  padding: 5px;
+  color: grey;
+  border-radius: 10px;
+}
+
+.filtr .priceFilter {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.filtr .priceFilter .inputBox {
+  flex-basis: 30%;
+}
+
+.filtr .filterBox .active {
+  color: black;
+}

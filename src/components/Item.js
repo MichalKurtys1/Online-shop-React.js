@@ -25,11 +25,13 @@ const Item = (props) => {
         <p className={classes.name}>{props.name}</p>
         <div className={classes.box}>
           <p className={classes.price}>{`${props.price} zł`}</p>
-          <FontAwesomeIcon
-            icon={icon}
-            className={classes.icon}
-            onClick={addFavoriteHandler}
-          />
+          <NavLink style={{ color: "black", textDecoration: "none" }}>
+            <FontAwesomeIcon
+              icon={icon}
+              className={classes.icon}
+              onClick={addFavoriteHandler}
+            />
+          </NavLink>
         </div>
       </div>
     </NavLink>

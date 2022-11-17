@@ -46,7 +46,7 @@ const Menu = (props) => {
   }, []);
 
   const profilHandler = () => {
-    navigate("/Profil");
+    navigate("/create-offer");
   };
 
   return (

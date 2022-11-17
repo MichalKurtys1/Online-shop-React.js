@@ -1,7 +1,7 @@
 .container {
 }
 
-.container p {
+.container p.title {
   font-size: 30px;
   font-weight: bold;
 }

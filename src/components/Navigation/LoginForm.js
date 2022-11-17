@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Input from "../ReUsed/Input";
 import classes from "./FormStyles.module.css";
 import { useState } from "react";
+import { init } from "../../hooks/auto-logout";
 
 const LoginForm = (props) => {
   const [loginInputValue, setLoginInputValue] = useState("");
@@ -41,6 +42,8 @@ const LoginForm = (props) => {
       .then((data) => {
         localStorage.setItem("token", data.idToken);
         localStorage.setItem("isLoggedIn", true);
+        localStorage.setItem("expirationTime", 3600000);
+        init();
         props.onClose();
       })
       .catch((err) => {

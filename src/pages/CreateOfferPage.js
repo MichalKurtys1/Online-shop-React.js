@@ -102,7 +102,7 @@ const CreateOfferPage = () => {
     <>
       <Navigation />
       <div className={classes.container}>
-        <p>Stwórz ofertę</p>
+        <p className={classes.title}>Stwórz ofertę</p>
         <form onSubmit={submitHandler}>
           {!nameIsCorrect && (
             <div className={classes.error}>

@@ -13,15 +13,14 @@ const Input = (props) => {
     } else {
       setIsCorrect(true);
     }
-  }, [props.isCorrect]);
+  }, [props.isCorrect, props.value]);
 
   const changeHandler = (event) => {
-    setIsText(true);
-
     if (event.target.value === "") {
       setIsText(false);
       focusHandler();
     }
+    setIsText(true);
   };
 
   const focusHandler = () => {
@@ -38,7 +37,7 @@ const Input = (props) => {
 
   return (
     <div className={classes.input}>
-      {!isFocused && (
+      {!isFocused && props.icon && (
         <FontAwesomeIcon icon={props.icon} className={classes.icon} />
       )}
       {!isFocused && <label>{props.placeholder}</label>}

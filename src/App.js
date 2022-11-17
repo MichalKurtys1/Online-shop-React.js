@@ -9,18 +9,11 @@ import FAQPage from "./pages/FAQPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import DetailPage from "./pages/DetailPage";
 import ProfilePage from "./pages/ProfilePage";
-import { useEffect } from "react";
 import ChangePasswordPage from "./pages/ChangePasswordPage";
 import ChangeEmailPage from "./pages/ChangeEmailPage";
 import ContactDataPage from "./pages/ContactDataPage";
 import CreateOfferPage from "./pages/CreateOfferPage";
 function App() {
-  useEffect(() => {
-    if (localStorage.length === 0) {
-      localStorage.setItem("isLoggedIn", false);
-    }
-  }, []);
-
   return (
     <div className="App">
       <Routes>

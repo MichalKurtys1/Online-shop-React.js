@@ -59,6 +59,35 @@ const Results = () => {
         (item) => item.category === params.categoryValue
       );
     }
+
+    if (location.search.includes("sort=ASC")) {
+      results = results.sort(function (a, b) {
+        return a.price - b.price;
+      });
+    } else if (location.search.includes("sort=DESC")) {
+      results = results.sort(function (a, b) {
+        return b.price - a.price;
+      });
+    }
+    if (location.search.includes("price=")) {
+      let value = location.search.split("=");
+      let value2 = value[1].split("&");
+      let priceValue = value2[0].split("-");
+
+      if (
+        (priceValue[0].includes("+") || priceValue[0] === "") &&
+        (priceValue[1].includes("+") || priceValue[1] === "")
+      ) {
+      } else if (priceValue[0].includes("+") || priceValue[0] === "") {
+        results = results.filter((item) => item.price <= priceValue[1]);
+      } else if (priceValue[1].includes("+") || priceValue[1] === "") {
+        results = results.filter((item) => item.price >= priceValue[0]);
+      } else {
+        results = results.filter(
+          (item) => item.price <= priceValue[1] && item.price >= priceValue[0]
+        );
+      }
+    }
     resultsNumber = results.length || 0;
   }
 
@@ -79,9 +108,6 @@ const Results = () => {
             />
           );
         })}
-      <div className={classes.pagination}>
-        <Pagination />
-      </div>
     </div>
   );
 };

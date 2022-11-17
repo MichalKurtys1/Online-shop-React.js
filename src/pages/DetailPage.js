@@ -61,7 +61,9 @@ const DetailPage = () => {
       (item) => item.id.toString() === params.itemId
     );
     recomendedList = loadedItems.filter(
-      (item) => item.category === selectedItem[0].category
+      (item) =>
+        item.category === selectedItem[0].category &&
+        item.id !== selectedItem[0].id
     );
 
     if (recomendedList.length > 4) {
@@ -137,17 +139,17 @@ const DetailPage = () => {
           <div className={classes.userDetails}>
             <img src={require("../Resource/noImage.png")} alt="" />
             <div className={classes.details}>
-              <p className={classes.name}>Jakub Karczmarek</p>
+              <p className={classes.name}>{selectedItem[0].author.name}</p>
               <div className={classes.dataBox}>
                 <p>Numer telefonu:</p>
                 <p>
-                  <strong>677 454 310</strong>
+                  <strong>{selectedItem[0].author.number}</strong>
                 </p>
               </div>
               <div className={classes.dataBox}>
                 <p>Adres Email:</p>
                 <p>
-                  <strong>Jakum.Karczmarek@wp.pl</strong>
+                  <strong>{selectedItem[0].author.email}</strong>
                 </p>
               </div>
             </div>
