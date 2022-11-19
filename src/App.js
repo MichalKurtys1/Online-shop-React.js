@@ -14,6 +14,7 @@ import ChangeEmailPage from "./pages/ChangeEmailPage";
 import ContactDataPage from "./pages/ContactDataPage";
 import CreateOfferPage from "./pages/CreateOfferPage";
 import { useSelector } from "react-redux";
+import CartPage from "./pages/CartPage";
 
 function App() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -31,16 +32,28 @@ function App() {
           element={<ResultsPage />}
         ></Route>
         <Route path="/details/:itemId" element={<DetailPage />}></Route>
-        <Route path="/password-change" element={<ChangePasswordPage />}></Route>
-        <Route path="/email-change" element={<ChangeEmailPage />}></Route>
-        <Route path="/contact-details" element={<ContactDataPage />}></Route>
-        <Route path="/create-offer" element={<CreateOfferPage />}></Route>
+        <Route path="/cart" element={<CartPage />}></Route>
         <Route path="/Kontakt" element={<ContactPage />}></Route>
         <Route path="/TermsOfUse" element={<TermsOfUse />}></Route>
         <Route path="/PrivacyPolicy" element={<PrivacyPolicyPage />}></Route>
         <Route path="/FAQ" element={<FAQPage />}></Route>
         <Route path="/O nas" element={<AboutUsPage />}></Route>
         {isLoggedIn && <Route path="/Profil" element={<ProfilePage />}></Route>}
+        {isLoggedIn && (
+          <Route
+            path="/password-change"
+            element={<ChangePasswordPage />}
+          ></Route>
+        )}
+        {isLoggedIn && (
+          <Route path="/email-change" element={<ChangeEmailPage />}></Route>
+        )}
+        {isLoggedIn && (
+          <Route path="/contact-details" element={<ContactDataPage />}></Route>
+        )}
+        {isLoggedIn && (
+          <Route path="/create-offer" element={<CreateOfferPage />}></Route>
+        )}
         {!isLoggedIn && <Route path="*" element={<Navigate to="/" />} />}
       </Routes>
     </div>

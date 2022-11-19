@@ -104,7 +104,9 @@ const Navigation = () => {
         <button onClick={showLogin} className={classes.btn}>
           <FontAwesomeIcon icon={faUser} className={classes.icons} />
         </button>
-        <FontAwesomeIcon icon={faShoppingCart} className={classes.icons} />
+        <NavLink to="/cart">
+          <FontAwesomeIcon icon={faShoppingCart} className={classes.icons} />
+        </NavLink>
       </div>
       {menuIsOpen && <Menu onClose={showMenu} onLogin={showLogin} />}
       {loginIsOpen && !isInProfile && (

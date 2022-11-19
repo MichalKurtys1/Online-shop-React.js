@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 const categories = [
   { icon: faCar, text: "Motoryzacja" },
@@ -33,17 +34,17 @@ const sitemap = [
 ];
 
 const Menu = (props) => {
+  const isLogged = useSelector((state) => state.auth.isLoggedIn);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn === "true") {
+    if (isLogged === true) {
       setIsLoggedIn(true);
     } else {
       setIsLoggedIn(false);
     }
-  }, []);
+  }, [isLogged]);
 
   const profilHandler = () => {
     navigate("/create-offer");

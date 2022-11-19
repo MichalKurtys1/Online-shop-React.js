@@ -18,8 +18,11 @@ import ItemSection from "../components/ItemSection";
 import useHttp from "../hooks/use-http";
 import { getAllItems } from "../lib/api";
 import { imageList } from "../Resource/imageMenager";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../store";
 
 const DetailPage = () => {
+  const dispatch = useDispatch();
   const params = useParams();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -73,6 +76,10 @@ const DetailPage = () => {
     image = imageList.find((image) => image.name === selectedItem[0].image);
   }
 
+  const addItemHandler = () => {
+    dispatch(cartActions.addItem(selectedItem[0]));
+  };
+
   return (
     <>
       <Navigation />
@@ -105,8 +112,8 @@ const DetailPage = () => {
               </div>
             </div>
             <div className={classes.buttons}>
-              <button>
-                Dodaj do Koszyka{" "}
+              <button onClick={addItemHandler}>
+                Dodaj do Koszyka
                 <FontAwesomeIcon
                   icon={faShoppingCart}
                   className={classes.icon}

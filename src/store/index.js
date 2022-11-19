@@ -26,11 +26,18 @@ const authSlice = createSlice({
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: { token: null, isLoggedIn: false },
+  initialState: { list: [] },
   reducers: {
-    addItem() {},
-    removeItem() {},
-    showList() {},
+    addItem(state, action) {
+      if (
+        state.list.filter((item) => item.id === action.payload.id).length === 0
+      ) {
+        state.list.push(action.payload);
+      }
+    },
+    removeItem(state, action) {
+      state.list = state.list.filter((item) => item.id !== action.payload);
+    },
   },
 });
 
@@ -42,4 +49,5 @@ const store = configureStore({
 });
 
 export const authActions = authSlice.actions;
+export const cartActions = cartSlice.actions;
 export default store;
