@@ -32,9 +32,9 @@ const ProfileDetails = () => {
         <button onClick={endedTransactionsHandler}>Zakończone</button>
       </div>
       <div className={classes.stateResults}>
-        {activeOffersIsOpen && <div>Brak aktywnych ogłoszeń</div>}
-        {deliveriesIsOpen && <div>Brak przesyłek</div>}
-        {endedTransactionsIsOpen && <div>Brak zakończonych transakcji</div>}
+        {activeOffersIsOpen && <p>Brak aktywnych ogłoszeń</p>}
+        {deliveriesIsOpen && <p>Brak przesyłek</p>}
+        {endedTransactionsIsOpen && <p>Brak zakończonych transakcji</p>}
       </div>
     </>
   );

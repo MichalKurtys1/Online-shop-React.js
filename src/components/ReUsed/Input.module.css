@@ -37,3 +37,20 @@
 .input input.incorrect {
   border-bottom: 2px solid red;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .input {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .input {
+    font-size: 35px;
+  }
+
+  .input input {
+    border-bottom: 4px solid #2a91a4;
+    padding: 20px;
+  }
+}

@@ -27,3 +27,23 @@
 .wrap {
   margin: 15px 0;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .text p {
+    font-size: 35px;
+  }
+
+  .showMore p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .text p {
+    font-size: 45px;
+  }
+
+  .showMore p {
+    font-size: 25px;
+  }
+}

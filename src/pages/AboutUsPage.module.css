@@ -95,3 +95,71 @@
   font-size: 15px;
   padding: 0 15px;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .imgBox {
+    height: 40vh;
+  }
+  .imgBox p.title {
+    font-size: 50px;
+  }
+
+  .imgBox .showMore {
+    font-size: 20px;
+  }
+
+  .textBox {
+    font-size: 24px;
+  }
+
+  .teamContainer .title p {
+    font-size: 35px;
+  }
+
+  .teamContainer .teamBox img {
+    width: 50vw;
+    height: 65vh;
+  }
+
+  .teamBox .text .name {
+    font-size: 40px;
+  }
+
+  .teamBox .text .specialization {
+    font-size: 25px;
+  }
+
+  .teamBox .text .description {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .imgBox p.title {
+    font-size: 60px;
+  }
+
+  .imgBox .showMore {
+    font-size: 24px;
+  }
+
+  .textBox {
+    font-size: 28px;
+  }
+
+  .teamContainer .title p {
+    font-size: 45px;
+  }
+
+  .teamBox .text .name {
+    font-size: 50px;
+  }
+
+  .teamBox .text .specialization {
+    font-size: 30px;
+  }
+
+  .teamBox .text .description {
+    font-size: 28px;
+  }
+}

@@ -17,3 +17,33 @@
   text-align: justify;
   padding: 5px;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .questionBox .question .plusIcon {
+    font-size: 20px;
+  }
+
+  .questionBox .question p {
+    font-size: 20px;
+  }
+
+  .questionBox .anwser {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .questionBox .question .plusIcon {
+    font-size: 28px;
+  }
+
+  .questionBox .question p {
+    font-size: 28px;
+  }
+
+  .questionBox .anwser {
+    padding: 10px;
+    font-size: 26px;
+  }
+}

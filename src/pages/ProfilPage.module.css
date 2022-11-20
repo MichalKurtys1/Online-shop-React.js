@@ -54,3 +54,47 @@
   border-radius: 10px;
   padding: 1vw;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .choiseBox {
+    width: 40%;
+  }
+
+  .choiseBox button p {
+    font-size: 26px;
+  }
+
+  .choiseBox button .panelIcon {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .logoutBtn {
+    width: 4vw;
+    height: 4vw;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .choiseBox {
+    width: 50%;
+  }
+
+  .choiseBox button p {
+    font-size: 40px;
+  }
+
+  .choiseBox button .panelIcon {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .logoutBtn {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .choiseBox .addBtn {
+    padding: 10px;
+  }
+}

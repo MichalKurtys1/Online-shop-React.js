@@ -26,3 +26,20 @@
   margin: 0 auto;
   margin-bottom: 30px;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .box .category {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .box .category {
+    font-size: 50px;
+  }
+
+  .box .category p {
+    margin: 0;
+    padding: 10px;
+  }
+}

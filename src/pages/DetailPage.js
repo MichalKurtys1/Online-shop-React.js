@@ -120,7 +120,7 @@ const DetailPage = () => {
                 />
               </button>
               <button>
-                Napisz{" "}
+                Napisz
                 <FontAwesomeIcon icon={faMessage} className={classes.icon} />
               </button>
             </div>

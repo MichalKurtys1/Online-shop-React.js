@@ -45,3 +45,44 @@
   color: white;
   font-weight: 300;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .card {
+    width: 30vw;
+    height: 22vh;
+  }
+
+  .card img {
+    width: 16vh;
+    height: 16vh;
+    border-radius: 120px;
+  }
+
+  .card p {
+    font-size: 26px;
+  }
+
+  .text p {
+    font-size: 35px;
+    margin: 20px 0;
+  }
+
+  .showMore p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .card p {
+    font-size: 34px;
+  }
+
+  .text p {
+    font-size: 50px;
+    margin: 30px 0;
+  }
+
+  .showMore p {
+    font-size: 25px;
+  }
+}

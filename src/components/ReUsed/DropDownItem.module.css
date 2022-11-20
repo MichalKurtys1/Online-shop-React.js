@@ -1,5 +1,5 @@
 .item {
-  border: 1px solid rgb(215, 215, 215);
+  border: 1px solid rgb(190, 190, 190);
   margin: 5px;
   border-radius: 10px;
 }
@@ -11,4 +11,16 @@
   padding-left: 10px;
   margin: 0;
   padding: 10px;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .item p {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .item p {
+    font-size: 30px;
+  }
 }

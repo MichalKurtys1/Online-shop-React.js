@@ -139,10 +139,120 @@
   display: block;
   margin: 20px auto;
   width: 70%;
-  height: 5vh;
   border: none;
   background-color: #2a91a4;
   border-radius: 10px;
   color: white;
   font-size: 20px;
+  padding: 10px;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .imgBox {
+    height: 40vh;
+  }
+
+  .imgBox p {
+    font-size: 50px;
+  }
+
+  .adresBox .title p {
+    font-size: 35px;
+  }
+
+  .adresBox .text {
+    border: 3px dashed grey;
+    border-top: none;
+    width: calc(50vw - 6px);
+  }
+
+  .adresBox .text p {
+    padding: 10px;
+    font-size: 26px;
+  }
+
+  .supportBox .title p {
+    font-size: 42px;
+  }
+
+  .supportBox .wrapper {
+    border: 3px dashed grey;
+    border-top: none;
+    width: calc(75vw - 6px);
+  }
+
+  .supportBox .text p {
+    font-size: 30px;
+  }
+
+  .supportBox .number {
+    padding: 10px;
+    flex-basis: 50%;
+  }
+
+  .supportBox .number p {
+    font-size: 26px;
+  }
+
+  .formBox form {
+    width: 60%;
+  }
+
+  .formBox .title p {
+    font-size: 40px;
+  }
+
+  .formBox input[type="submit"] {
+    font-size: 30px;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .imgBox p {
+    font-size: 60px;
+  }
+
+  .adresBox .title p {
+    font-size: 50px;
+  }
+
+  .adresBox .text {
+    border: 4px dashed grey;
+    border-top: none;
+    width: calc(50vw - 8px);
+  }
+
+  .adresBox .text p {
+    padding: 15px;
+    font-size: 32px;
+  }
+
+  .supportBox .title p {
+    font-size: 50px;
+  }
+
+  .supportBox .wrapper {
+    border: 4px dashed grey;
+    border-top: none;
+    width: calc(75vw - 8px);
+  }
+
+  .supportBox .text p {
+    font-size: 35px;
+  }
+
+  .supportBox .number p {
+    font-size: 28px;
+  }
+
+  .formBox .title p {
+    font-size: 50px;
+    padding: 20px;
+  }
+
+  .formBox input[type="submit"] {
+    font-size: 35px;
+    padding: 20px;
+  }
 }

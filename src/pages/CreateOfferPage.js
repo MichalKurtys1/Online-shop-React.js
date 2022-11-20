@@ -134,10 +134,13 @@ const CreateOfferPage = () => {
               <p className={classes.errorMessage}>Nie wybrano zdjęcia.</p>
             </div>
           )}
-          <DropDownList
-            categories={categories}
-            onCategoryChange={changeCategoryHandler}
-          />
+          <div className={classes.DropDownList}>
+            <DropDownList
+              categories={categories}
+              onCategoryChange={changeCategoryHandler}
+            />
+          </div>
+
           <Input
             placeholder="Nazwa"
             icon={faPenFancy}

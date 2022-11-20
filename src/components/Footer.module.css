@@ -24,3 +24,41 @@
   color: white;
   font-size: 11px;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .footer .box {
+    flex-basis: 35%;
+  }
+
+  .box .title {
+    font-size: 40px;
+    border-bottom: dotted 3px white;
+  }
+
+  .box p {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .copyrights {
+    font-size: 18px;
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .box .title {
+    font-size: 50px;
+    border-bottom: dotted 4px white;
+  }
+
+  .box p {
+    font-size: 26px;
+    padding: 20px;
+  }
+
+  .copyrights {
+    font-size: 20px;
+    flex-basis: 100%;
+  }
+}

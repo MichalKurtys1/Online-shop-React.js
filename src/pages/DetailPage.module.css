@@ -123,3 +123,135 @@
   font-size: 13px;
   margin: 5px;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .detailsBox p.links {
+    margin-left: 20px;
+    font-size: 22px;
+  }
+
+  .detailsBox h1 {
+    font-size: 32px;
+  }
+
+  .detailsBox img {
+    width: 90%;
+  }
+
+  .detailsBox .details {
+    width: 80%;
+  }
+
+  .detailsBox .details .price {
+    font-size: 40px;
+  }
+
+  .detailsBox .details .leftBox p {
+    margin-left: 5px;
+    font-size: 22px;
+  }
+  .detailsBox .details .leftBox .userIcon {
+    font-size: 22px;
+  }
+
+  .detailsBox .details .heartIcon {
+    font-size: 35px;
+  }
+
+  .detailsBox .buttons button {
+    width: 50%;
+    font-size: 30px;
+    margin: 20px;
+  }
+
+  .detailsBox .buttons button .icon {
+    margin-left: 15px;
+  }
+
+  .descriptionBox p.title {
+    font-size: 24px;
+  }
+
+  .descriptionBox p.description {
+    font-size: 22px;
+  }
+
+  .descriptionBox button {
+    font-size: 20px;
+  }
+
+  .userDetails {
+    width: 70%;
+  }
+
+  .userDetails .details p.name {
+    font-size: 35px;
+  }
+
+  .userDetails .details .dataBox p {
+    font-size: 18px;
+    margin: 5px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .detailsBox p.links {
+    font-size: 30px;
+  }
+
+  .detailsBox h1 {
+    font-size: 40px;
+  }
+
+  .detailsBox .details .price {
+    font-size: 50px;
+  }
+
+  .detailsBox .details .leftBox p {
+    font-size: 30px;
+  }
+  .detailsBox .details .leftBox .userIcon {
+    font-size: 30px;
+  }
+
+  .detailsBox .details .heartIcon {
+    font-size: 45px;
+  }
+
+  .detailsBox .buttons button {
+    width: 50%;
+    font-size: 35px;
+    margin: 20px;
+  }
+
+  .descriptionBox p.title {
+    font-size: 32px;
+  }
+
+  .descriptionBox p.description {
+    font-size: 28px;
+  }
+
+  .descriptionBox button {
+    font-size: 30px;
+  }
+
+  .userDetails {
+    width: 75%;
+  }
+
+  .userDetails img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 160px;
+  }
+
+  .userDetails .details p.name {
+    font-size: 45px;
+  }
+
+  .userDetails .details .dataBox p {
+    font-size: 24px;
+    margin: 5px;
+  }
+}

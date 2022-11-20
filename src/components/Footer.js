@@ -28,7 +28,6 @@ const Footer = () => {
         </NavLink>
       </div>
       <p className={classes.copyrights}>
-        Copyright{" "}
         <FontAwesomeIcon icon={faCopyright} className={classes.icon} /> H & M
         All Rights Reserved
       </p>

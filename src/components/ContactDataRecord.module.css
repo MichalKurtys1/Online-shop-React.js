@@ -37,3 +37,25 @@
   border-radius: 8px;
   border: 2px solid #2a91a4;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .DataRecordBox p {
+    font-size: 28px;
+  }
+
+  .DataRecordBox .dataInput {
+    padding: 10px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .DataRecordBox p {
+    font-size: 40px;
+  }
+
+  .DataRecordBox .dataInput {
+    padding: 10px;
+    font-size: 30px;
+  }
+}

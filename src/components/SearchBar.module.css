@@ -34,3 +34,53 @@
   color: white;
   font-size: 20px;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .search {
+    margin: 50px;
+  }
+
+  .search input[type="text"] {
+    border: solid 3px #2a91a4;
+    font-size: 26px;
+    min-width: 50vw;
+  }
+
+  .search input[type="text"]::placeholder {
+    font-size: 26px;
+  }
+
+  .search button {
+    min-width: 5.5vh;
+    min-height: 5.5vh;
+  }
+
+  .icon {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+  .search input[type="text"] {
+    border: solid 4px #2a91a4;
+    border-radius: 15px;
+    min-width: 60vw;
+    min-height: 5vh;
+    font-size: 35px;
+  }
+
+  .search input[type="text"]::placeholder {
+    font-size: 35px;
+    height: 5vh;
+  }
+
+  .search button {
+    min-width: 6vh;
+    min-height: 6vh;
+    border-radius: 15px;
+  }
+
+  .icon {
+    font-size: 35px;
+  }
+}

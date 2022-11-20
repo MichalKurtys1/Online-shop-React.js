@@ -24,3 +24,9 @@
   font-size: 24px;
   color: #2a91a4;
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .cartItem {
+    width: 75%;
+  }
+}
