@@ -47,3 +47,25 @@
     font-size: 25px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .text p {
+    font-size: 32px;
+    margin: 20px 0;
+  }
+
+  .showMore p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .text p {
+    font-size: 42px;
+    margin: 30px 0;
+  }
+
+  .showMore p {
+    font-size: 20px;
+  }
+}

@@ -84,3 +84,53 @@
     font-size: 35px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .search {
+    margin: 40px;
+  }
+
+  .search input[type="text"] {
+    min-width: 40vw;
+    min-height: 8vh;
+    font-size: 22px;
+  }
+
+  .search input[type="text"]::placeholder {
+    font-size: 22px;
+    line-height: 8vh;
+  }
+
+  .search button {
+    min-width: 12vh;
+    min-height: 12vh;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .search {
+    margin: 60px;
+  }
+
+  .search input[type="text"] {
+    min-width: 40vw;
+    min-height: 5vh;
+  }
+
+  .search input[type="text"]::placeholder {
+    line-height: 4vh;
+  }
+
+  .search button {
+    min-width: 7vh;
+    min-height: 7vh;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+}

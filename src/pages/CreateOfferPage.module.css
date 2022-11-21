@@ -124,3 +124,22 @@ p.errorMessage {
     margin: 0 auto;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .container {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .container {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .container form .DropDownList {
+    width: 65%;
+    margin: 0 auto;
+  }
+}

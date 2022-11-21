@@ -52,7 +52,7 @@
 }
 
 .categories {
-  margin-top: 10vh;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -64,10 +64,9 @@
   width: 80%;
 }
 
-.categories .title {
+p.title {
   font-size: 30px;
-  align-self: flex-start;
-  margin-left: 8vw;
+  margin: 10vh auto 0;
   font-weight: bold;
 }
 
@@ -101,7 +100,7 @@
     font-size: 30px;
   }
 
-  .categories .title {
+  p.title {
     font-size: 40px;
   }
 
@@ -141,7 +140,7 @@
     font-size: 40px;
   }
 
-  .categories .title {
+  p.title {
     font-size: 55px;
   }
 
@@ -172,5 +171,101 @@
   .menu {
     height: 100vh;
     width: 70vw;
+  }
+}
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .menu {
+    height: 100vh;
+    width: 90vw;
+  }
+
+  .menu .icon {
+    font-size: 32px;
+  }
+
+  .menu .btnClose {
+    top: 15px;
+    left: 12px;
+  }
+
+  .menu .btnLogIn {
+    top: 15px;
+    right: 15vw;
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  .backdrop {
+    width: 10vw;
+    height: 100vh;
+  }
+
+  .categories {
+    width: 100%;
+    margin-top: 20px;
+    height: 65%;
+    flex-wrap: wrap;
+  }
+
+  .categories .separator {
+    display: none;
+  }
+
+  p.title {
+    text-align: left;
+    width: 100%;
+    font-size: 34px;
+    margin: 20vh 30px 0;
+  }
+
+  .categories .category {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .menu {
+    height: 100vh;
+    width: 50vw;
+  }
+
+  .menu .icon {
+    font-size: 40px;
+  }
+
+  .menu .btnClose {
+    top: 20px;
+  }
+
+  .menu .btnLogIn {
+    right: 52vw;
+    width: 18vw;
+  }
+
+  .backdrop {
+    width: 50vw;
+    height: 100vh;
+  }
+
+  .categories {
+    margin-left: 30px;
+    width: 50%;
+    height: 80%;
+  }
+
+  .categories .separator {
+    display: block;
+  }
+
+  p.title {
+    text-align: left;
+    width: 100%;
+    font-size: 34px;
+    margin: 12vh 30px 0;
+  }
+
+  .categories .category {
+    width: 100%;
   }
 }

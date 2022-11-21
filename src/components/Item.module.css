@@ -20,6 +20,7 @@
 
 .box {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   font-size: 20px;
 }
@@ -96,5 +97,101 @@
     width: 90%;
     margin: 0 auto;
     font-size: 35px;
+  }
+}
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .container {
+    width: 30vw;
+    height: 85vh;
+    margin-bottom: 20px;
+  }
+
+  .container img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 15px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .box {
+    font-size: 20px;
+  }
+
+  .price {
+    margin: 10px 20px;
+    font-size: 20px;
+  }
+
+  .icon {
+    margin: 0 10px;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 844px) and (orientation: landscape) {
+  .container {
+    width: 30vw;
+    height: 90vh;
+    margin-bottom: 20px;
+  }
+
+  .container img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 15px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .box {
+    font-size: 20px;
+  }
+
+  .price {
+    margin: 10px 20px;
+    font-size: 20px;
+  }
+
+  .icon {
+    margin: 0 10px;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .container {
+    width: 30vw;
+    height: 60vh;
+    margin-bottom: 20px;
+  }
+
+  .container img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 15px;
+  }
+
+  .name {
+    font-size: 30px;
+  }
+
+  .box {
+    font-size: 20px;
+  }
+
+  .price {
+    margin: 10px 20px;
+    font-size: 30px;
+  }
+
+  .icon {
+    margin: 0 10px;
+    font-size: 40px;
   }
 }

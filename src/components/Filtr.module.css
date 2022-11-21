@@ -114,3 +114,42 @@
     font-size: 32px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .filtr {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .filtr .filterBox .category {
+    width: 40vw;
+  }
+
+  .filterBox .category .selectedCategory p {
+    font-size: 22px;
+    padding: 0;
+  }
+
+  .filtr .filterBox .iconCancel {
+    font-size: 22px;
+  }
+
+  .filtr .filterBox .icon {
+    font-size: 24px;
+  }
+
+  .filtr .priceFilter {
+    font-size: 24px;
+    margin: 20px auto;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .filtr {
+    width: 55%;
+  }
+
+  .filtr .filterBox .category {
+    width: 25vw;
+  }
+}

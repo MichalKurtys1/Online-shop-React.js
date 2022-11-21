@@ -98,3 +98,29 @@
     padding: 10px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .choiseBox {
+    width: 45%;
+  }
+
+  .choiseBox button p {
+    font-size: 26px;
+  }
+
+  .choiseBox button .panelIcon {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .logoutBtn {
+    width: 4vw;
+    height: 4vw;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .choiseBox {
+    width: 35%;
+  }
+}

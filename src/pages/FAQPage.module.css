@@ -39,3 +39,23 @@
     font-size: 50px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .imgBox {
+    height: 90vh;
+  }
+
+  .imgBox p {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .imgBox {
+    height: 90vh;
+  }
+
+  .imgBox p {
+    font-size: 80px;
+  }
+}

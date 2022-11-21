@@ -163,3 +163,83 @@
     font-size: 28px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .imgBox {
+    height: 80vh;
+  }
+  .imgBox p.title {
+    font-size: 50px;
+  }
+
+  .imgBox .showMore {
+    font-size: 20px;
+  }
+
+  .textBox {
+    font-size: 20px;
+  }
+
+  .teamBox .text {
+    width: 50%;
+  }
+
+  .teamContainer .title p {
+    font-size: 35px;
+  }
+
+  .teamContainer .teamBox img {
+    width: 30%;
+    height: 130vh;
+  }
+
+  .teamContainer .teamBox {
+    justify-content: center;
+  }
+
+  .teamBox .text .name {
+    font-size: 30px;
+  }
+
+  .teamBox .text .specialization {
+    font-size: 22px;
+  }
+
+  .teamBox .text .description {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .imgBox p.title {
+    font-size: 60px;
+  }
+
+  .imgBox .showMore {
+    font-size: 26px;
+  }
+
+  .textBox {
+    font-size: 26px;
+  }
+
+  .teamBox .text {
+    width: 50%;
+  }
+
+  .teamContainer .title p {
+    font-size: 45px;
+  }
+
+  .teamBox .text .name {
+    font-size: 50px;
+  }
+
+  .teamBox .text .specialization {
+    font-size: 40px;
+  }
+
+  .teamBox .text .description {
+    font-size: 30px;
+  }
+}

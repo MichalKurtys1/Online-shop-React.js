@@ -70,9 +70,8 @@ const Menu = (props) => {
             Stwórz Ogłoszenie
           </button>
         )}
+        <p className={classes.title}>Kategorie</p>
         <div className={classes.categories}>
-          <p className={classes.title}>Kategorie</p>
-
           {categories.map((category) => {
             return (
               <NavLink

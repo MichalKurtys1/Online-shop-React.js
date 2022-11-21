@@ -78,3 +78,50 @@
     font-size: 55px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .container .submitBtn {
+    font-size: 22px;
+    padding: 15px;
+  }
+
+  .container .submitBtn .icon {
+    padding-left: 10px;
+  }
+
+  .container p {
+    font-size: 20px;
+  }
+
+  .container p.title {
+    font-size: 45px;
+  }
+
+  .container p.sum {
+    margin: 20px auto;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .container .submitBtn {
+    margin: 30px;
+    font-size: 32px;
+    padding: 15px;
+  }
+
+  .container .submitBtn .icon {
+    padding-left: 10px;
+  }
+
+  .container p {
+    font-size: 24px;
+  }
+
+  .container p.title {
+    font-size: 50px;
+  }
+
+  .container p.sum {
+    margin: 20px auto;
+  }
+}

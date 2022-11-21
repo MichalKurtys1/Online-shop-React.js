@@ -57,6 +57,7 @@ const ForgetPassword = (props) => {
         <input type="submit" value="Resetuj hasło" />
       </form>
       <div className={classes.signIn}>
+        <span>Masz już konto?</span>
         <button onClick={props.onOpenLogin}>Zaloguj się</button>
       </div>
     </div>

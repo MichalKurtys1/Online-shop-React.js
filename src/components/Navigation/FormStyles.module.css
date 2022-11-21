@@ -200,3 +200,71 @@ p.errorMessage {
     font-size: 28px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .container .btn {
+    font-size: 32px;
+  }
+
+  .container p {
+    font-size: 38px;
+    margin: 0;
+  }
+
+  .container form {
+    margin: 10px auto;
+    width: 45%;
+    height: 75%;
+  }
+
+  .container form input[type="submit"] {
+    width: 55%;
+  }
+
+  .skewed {
+    top: 98vh;
+  }
+
+  .signIn {
+    width: auto;
+    bottom: 4vh;
+    left: 20vw;
+  }
+
+  .message {
+    font-size: 14px;
+  }
+
+  .error {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 844px) and (orientation: landscape) {
+  .container form {
+    width: 35%;
+    height: 75%;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .container form {
+    margin-top: 5vh;
+    width: 35%;
+    height: 50%;
+  }
+
+  .container form input[type="submit"] {
+    width: 55%;
+  }
+
+  .signIn {
+    width: auto;
+    bottom: 4vh;
+    left: 14vw;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+}

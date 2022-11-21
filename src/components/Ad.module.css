@@ -1,3 +1,9 @@
 .img {
   width: 95vw;
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .img {
+    width: 70vw;
+  }
+}

@@ -28,3 +28,9 @@
     font-size: 30px;
   }
 }
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .conteiner .amount {
+    font-size: 30px;
+  }
+}

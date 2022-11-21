@@ -53,3 +53,45 @@
     margin-left: 20px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .nav {
+    height: 17vh;
+  }
+
+  .nav img {
+    width: 24vw;
+  }
+
+  .icons {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 844px) and (orientation: landscape) {
+  .nav {
+    height: 17vh;
+  }
+
+  .nav img {
+    width: 20vw;
+  }
+
+  .icons {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .nav {
+    height: 11vh;
+  }
+
+  .nav img {
+    width: 18vw;
+  }
+
+  .icons {
+    font-size: 40px;
+  }
+}

@@ -255,3 +255,147 @@
     margin: 5px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .detailsBox p.links {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .detailsBox h1 {
+    font-size: 28px;
+  }
+
+  .detailsBox img {
+    width: 80%;
+    height: 90vh;
+  }
+
+  .detailsBox .details {
+    width: 80%;
+  }
+
+  .detailsBox .details .price {
+    font-size: 36px;
+  }
+
+  .detailsBox .details .leftBox p {
+    margin-left: 5px;
+    font-size: 20px;
+  }
+  .detailsBox .details .leftBox .userIcon {
+    font-size: 20px;
+  }
+
+  .detailsBox .details .heartIcon {
+    font-size: 30px;
+  }
+
+  .detailsBox .buttons button {
+    width: 50%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .detailsBox .buttons button .icon {
+    margin-left: 15px;
+  }
+
+  .descriptionBox p.title {
+    font-size: 24px;
+  }
+
+  .descriptionBox p.description {
+    font-size: 22px;
+  }
+
+  .descriptionBox button {
+    font-size: 20px;
+  }
+
+  .userDetails {
+    width: 70%;
+  }
+
+  .userDetails .details p.name {
+    font-size: 35px;
+  }
+
+  .userDetails .details .dataBox p {
+    font-size: 18px;
+    margin: 5px;
+  }
+}
+
+@media (min-width: 844px) and (orientation: landscape) {
+  .detailsBox .buttons button {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .detailsBox p.links {
+    font-size: 30px;
+  }
+
+  .detailsBox h1 {
+    font-size: 45px;
+  }
+
+  .detailsBox .details .price {
+    font-size: 45px;
+  }
+
+  .detailsBox .details .leftBox p {
+    margin-left: 5px;
+    font-size: 28px;
+  }
+  .detailsBox .details .leftBox .userIcon {
+    font-size: 28px;
+  }
+
+  .detailsBox .details .heartIcon {
+    font-size: 40px;
+  }
+
+  .detailsBox .buttons button {
+    width: 35%;
+
+    font-size: 30px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .detailsBox .buttons button .icon {
+    margin-left: 15px;
+  }
+
+  .descriptionBox p.title {
+    font-size: 30px;
+  }
+
+  .descriptionBox p.description {
+    font-size: 28px;
+  }
+
+  .descriptionBox button {
+    font-size: 20px;
+  }
+
+  .userDetails {
+    width: 65%;
+  }
+
+  .userDetails img {
+    border-radius: 160px;
+  }
+
+  .userDetails .details p.name {
+    font-size: 45px;
+  }
+
+  .userDetails .details .dataBox p {
+    font-size: 26px;
+    margin: 5px;
+  }
+}

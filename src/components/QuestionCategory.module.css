@@ -43,3 +43,14 @@
     padding: 10px;
   }
 }
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .box .category {
+    font-size: 50px;
+  }
+
+  .box .category p {
+    margin: 0;
+    padding: 10px;
+  }
+}

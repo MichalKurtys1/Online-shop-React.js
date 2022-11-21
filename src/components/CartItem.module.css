@@ -30,3 +30,28 @@
     width: 75%;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .cartItem {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .cartItem {
+    width: 50%;
+  }
+
+  .cartItem p.name {
+    font-size: 26px;
+  }
+
+  .cartItem p.price {
+    font-size: 30px;
+  }
+
+  .cartItem .icon {
+    padding: 10px;
+    font-size: 34px;
+  }
+}

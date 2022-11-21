@@ -59,3 +59,35 @@
     font-size: 30px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .DataRecordBox p {
+    font-size: 22px;
+  }
+
+  .DataRecordBox .dataInput {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .DataRecordBox .icon {
+    width: 4vw;
+    height: 4vw;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .DataRecordBox p {
+    font-size: 32px;
+  }
+
+  .DataRecordBox .dataInput {
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  .DataRecordBox .icon {
+    width: 4vw;
+    height: 4vw;
+  }
+}

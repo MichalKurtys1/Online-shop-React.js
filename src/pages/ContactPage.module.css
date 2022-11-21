@@ -256,3 +256,38 @@
     padding: 20px;
   }
 }
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .imgBox {
+    height: 90vh;
+  }
+
+  .formBox form {
+    width: 50%;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .imgBox {
+    height: 60vh;
+  }
+
+  .formBox {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .adresBox .text p {
+    margin: 0;
+    padding: 20px;
+  }
+
+  .supportBox .title {
+    width: 50vw;
+  }
+
+  .supportBox .wrapper {
+    width: calc(50vw - 3px);
+  }
+}
