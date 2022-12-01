@@ -56,3 +56,14 @@
     font-size: 30px;
   }
 }
+
+@media (min-width: 1200px) {
+  .container .selectBox .icons {
+    padding: 8px;
+    font-size: 28px;
+  }
+
+  .container .selectBox p {
+    font-size: 28px;
+  }
+}

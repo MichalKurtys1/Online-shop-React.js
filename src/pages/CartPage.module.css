@@ -125,3 +125,10 @@
     margin: 20px auto;
   }
 }
+
+@media (min-width: 1200px) {
+  .container .submitBtn {
+    margin: 30px;
+    padding: 25px;
+  }
+}

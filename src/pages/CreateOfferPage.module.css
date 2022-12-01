@@ -143,3 +143,43 @@ p.errorMessage {
     margin: 0 auto;
   }
 }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 40%;
+  }
+
+  .container form .DropDownList {
+    width: 90%;
+  }
+
+  .container p.title {
+    font-size: 50px;
+  }
+
+  .container form input[type="submit"] {
+    width: 60%;
+    padding: 15px;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: 35%;
+  }
+
+  .container form .DropDownList {
+    width: 75%;
+  }
+
+  .container p.title {
+    font-size: 50px;
+  }
+
+  .container form input[type="submit"] {
+    width: 60%;
+    padding: 15px;
+    font-size: 30px;
+  }
+}

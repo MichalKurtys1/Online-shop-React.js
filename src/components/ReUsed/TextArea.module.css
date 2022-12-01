@@ -56,3 +56,14 @@
     padding: 20px;
   }
 }
+
+@media (min-width: 1200px) {
+  .textarea {
+    font-size: 30px;
+  }
+
+  .textarea textarea {
+    border-bottom: 4px solid #2a91a4;
+    padding: 20px;
+  }
+}

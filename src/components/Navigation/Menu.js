@@ -51,7 +51,7 @@ const Menu = (props) => {
   };
 
   return (
-    <div className={classes.container}>
+    <>
       <div className={classes.menu}>
         <button onClick={props.onClose} className={classes.btnClose}>
           <FontAwesomeIcon icon={faX} className={classes.icon} />
@@ -104,7 +104,7 @@ const Menu = (props) => {
         </div>
       </div>
       <div onClick={props.onClose} className={classes.backdrop}></div>
-    </div>
+    </>
   );
 };
 

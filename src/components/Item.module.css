@@ -4,7 +4,7 @@
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .container img {
@@ -193,5 +193,32 @@
   .icon {
     margin: 0 10px;
     font-size: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 30vw;
+    height: 65vh;
+  }
+}
+
+@media (min-width: 1200px) and (min-height: 950px) {
+  .container {
+    width: 30vw;
+    height: 58vh;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: 22vw;
+    height: 55vh;
+  }
+
+  .container img {
+    width: 22vw;
+    height: 22vw;
+    border-radius: 15px;
   }
 }

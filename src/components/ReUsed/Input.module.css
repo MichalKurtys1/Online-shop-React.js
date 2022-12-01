@@ -54,3 +54,14 @@
     padding: 20px;
   }
 }
+
+@media (min-width: 1200px) {
+  .input {
+    font-size: 30px;
+  }
+
+  .input input {
+    border-bottom: 4px solid #2a91a4;
+    padding: 20px;
+  }
+}

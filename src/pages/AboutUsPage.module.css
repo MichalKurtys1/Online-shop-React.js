@@ -243,3 +243,26 @@
     font-size: 30px;
   }
 }
+
+@media (min-width: 1200px) {
+  .textBox {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1600px) {
+  .teamBox .text {
+    width: 30%;
+  }
+
+  .teamContainer .teamBox img {
+    width: 18vw;
+    height: 65vh;
+  }
+
+  .textBox {
+    width: 50%;
+    margin: 0 auto;
+  }
+}

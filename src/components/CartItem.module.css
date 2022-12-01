@@ -55,3 +55,16 @@
     font-size: 34px;
   }
 }
+
+@media (min-width: 1200px) {
+  .cartItem {
+    width: 50%;
+    height: 12vh;
+  }
+}
+
+@media (min-width: 1600px) {
+  .cartItem {
+    width: 40%;
+  }
+}

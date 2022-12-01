@@ -54,3 +54,13 @@
     padding: 10px;
   }
 }
+
+@media (min-width: 1600px) {
+  .box .category {
+    width: 60vw;
+  }
+
+  .questions {
+    width: calc(60vw - 3px);
+  }
+}

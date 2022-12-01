@@ -291,3 +291,132 @@
     width: calc(50vw - 3px);
   }
 }
+
+@media (min-width: 1200px) {
+  .imgBox {
+    height: 80vh;
+  }
+
+  .imgBox p {
+    font-size: 70px;
+  }
+
+  .formBox {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .adresBox .title {
+    width: 45vw;
+  }
+
+  .adresBox .title p {
+    font-size: 42px;
+  }
+
+  .adresBox .text {
+    width: calc(45vw - 3px);
+  }
+
+  .adresBox .text p {
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  .supportBox .title {
+    width: 45vw;
+  }
+
+  .supportBox .wrapper {
+    width: calc(45vw - 3px);
+  }
+
+  .supportBox .title p {
+    font-size: 42px;
+  }
+
+  .supportBox .text p {
+    font-size: 30px;
+  }
+
+  .supportBox .number p {
+    font-size: 25px;
+  }
+
+  .formBox .title p {
+    font-size: 42px;
+  }
+
+  .formBox input[type="submit"] {
+    width: 75%;
+    font-size: 30px;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .formBox {
+    width: 50%;
+  }
+
+  .adresBox .title {
+    width: 40vw;
+  }
+
+  .adresBox .text {
+    width: calc(40vw - 3px);
+  }
+
+  .supportBox .title {
+    width: 40vw;
+  }
+
+  .supportBox .wrapper {
+    width: calc(40vw - 3px);
+  }
+}
+
+@media (min-width: 1900px) {
+  .formBox {
+    width: 60%;
+  }
+
+  .adresBox .title {
+    width: 35vw;
+  }
+
+  .adresBox .text {
+    width: calc(35vw - 3px);
+  }
+
+  .adresBox .text p {
+    font-size: 35px;
+  }
+
+  .supportBox .title {
+    width: 35vw;
+  }
+
+  .supportBox .wrapper {
+    width: calc(35vw - 3px);
+  }
+
+  .supportBox .text p {
+    font-size: 35px;
+  }
+
+  .supportBox .number p {
+    font-size: 30px;
+  }
+
+  .formBox .title {
+    width: 70%;
+    margin: 20px auto;
+  }
+
+  .formBox input[type="submit"] {
+    width: 65%;
+    font-size: 30px;
+    padding: 15px;
+  }
+}

@@ -27,8 +27,8 @@ const ProfileDetails = () => {
   return (
     <>
       <div className={classes.stateTypes}>
-        <button onClick={activeOffersHandler}>Aktywne ogłoszenia</button>
         <button onClick={deliveriesHandler}>Twoje przesyłki</button>
+        <button onClick={activeOffersHandler}>Aktywne ogłoszenia</button>
         <button onClick={endedTransactionsHandler}>Zakończone</button>
       </div>
       <div className={classes.stateResults}>

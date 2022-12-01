@@ -399,3 +399,67 @@
     margin: 5px;
   }
 }
+
+@media (min-width: 1200px) {
+  .detailsBox p.links {
+    margin-left: 20px;
+    font-size: 25px;
+  }
+
+  .detailsBox h1 {
+    font-size: 40px;
+  }
+
+  .detailsBox img {
+    width: 60%;
+    height: 70vh;
+  }
+
+  .detailsBox .details {
+    width: 60%;
+  }
+
+  .detailsBox .buttons button {
+    width: 30%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .descriptionBox p.description {
+    padding: 0 5vw;
+  }
+
+  .userDetails {
+    width: 45%;
+  }
+
+  .userDetails img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 100px;
+  }
+
+  .userDetails .details p.name {
+    font-size: 40px;
+  }
+
+  .userDetails .details .dataBox p {
+    font-size: 22px;
+    margin: 5px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .userDetails {
+    width: 40%;
+  }
+
+  .userDetails img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 160px;
+  }
+  .descriptionBox p.description {
+    padding: 0 10vw;
+  }
+}

@@ -134,3 +134,39 @@
     font-size: 22px;
   }
 }
+
+@media (min-width: 1200px) {
+  .search input[type="text"] {
+    border: solid 3px #2a91a4;
+    min-width: 40vw;
+    min-height: 5vh;
+    font-size: 30px;
+  }
+
+  .search input[type="text"]::placeholder {
+    line-height: 4vh;
+    font-size: 30px;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .search input[type="text"] {
+    border: solid 3px #2a91a4;
+    min-width: 30vw;
+    min-height: 5vh;
+    font-size: 30px;
+  }
+
+  .search input[type="text"]::placeholder {
+    line-height: 5vh;
+    font-size: 30px;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+}

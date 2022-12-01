@@ -59,3 +59,13 @@
     font-size: 80px;
   }
 }
+
+@media (min-width: 1200px) {
+  .imgBox {
+    height: 80vh;
+  }
+
+  .imgBox p {
+    font-size: 70px;
+  }
+}

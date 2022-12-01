@@ -110,3 +110,18 @@
     font-size: 32px;
   }
 }
+
+@media (min-width: 1200px) {
+  .imgBox {
+    height: 80vh;
+  }
+
+  .imgBox p {
+    font-size: 70px;
+  }
+
+  .textBox {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

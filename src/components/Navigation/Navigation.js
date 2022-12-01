@@ -100,7 +100,7 @@ const Navigation = () => {
           <img src={logo} alt="Logo" />
         </NavLink>
       </div>
-      <div>
+      <div className={classes.nav__box}>
         <button onClick={showLogin} className={classes.btn}>
           <FontAwesomeIcon icon={faUser} className={classes.icons} />
         </button>

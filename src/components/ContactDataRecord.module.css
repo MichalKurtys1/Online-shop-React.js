@@ -91,3 +91,10 @@
     height: 4vw;
   }
 }
+
+@media (min-width: 1600px) {
+  .DataRecordBox .icon {
+    width: 3vw;
+    height: 3vw;
+  }
+}

@@ -153,3 +153,55 @@
     width: 25vw;
   }
 }
+
+@media (min-width: 1200px) {
+  .filtr {
+    width: 40%;
+  }
+
+  .filtr .filterBox .category {
+    width: 28vw;
+  }
+
+  .filterBox .category .selectedCategory p {
+    font-size: 28px;
+    padding: 5px;
+  }
+
+  .filtr .priceFilter {
+    width: 85%;
+    font-size: 25px;
+  }
+
+  .filtr .filterBox .icon {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .filtr {
+    width: 40%;
+  }
+
+  .filtr .filterBox .category {
+    width: 25vw;
+  }
+
+  .filtr .priceFilter {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1900px) {
+  .filtr {
+    width: 40%;
+  }
+
+  .filtr .filterBox .category {
+    width: 20vw;
+  }
+
+  .filtr .priceFilter {
+    width: 75%;
+  }
+}

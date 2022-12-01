@@ -24,3 +24,9 @@
     font-size: 30px;
   }
 }
+
+@media (min-width: 1200px) {
+  .item p {
+    font-size: 30px;
+  }
+}

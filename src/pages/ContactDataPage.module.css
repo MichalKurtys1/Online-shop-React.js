@@ -9,3 +9,26 @@
   font-weight: bold;
   margin: 20px 20px;
 }
+
+@media (min-width: 1024px) {
+  .container p.title {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container p.title {
+    font-size: 60px;
+  }
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: 50%;
+  }
+}

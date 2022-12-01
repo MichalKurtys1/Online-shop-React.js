@@ -124,3 +124,46 @@
     width: 35%;
   }
 }
+
+@media (min-width: 1200px) {
+  .choiseBox {
+    margin: 15px;
+    width: 65%;
+  }
+
+  .choiseBox button {
+    font-size: 30px;
+  }
+
+  .choiseBox .addBtn {
+    padding: 5px;
+  }
+
+  .choiseBox button p {
+    font-size: 30px;
+  }
+
+  .choiseBox button .panelIcon {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  .logoutBtn {
+    right: 50px;
+    width: 3vw;
+    height: 3vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  .choiseBox button .panelIcon {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .logoutBtn {
+    width: 2vw;
+    height: 2vw;
+    padding: 10px;
+  }
+}

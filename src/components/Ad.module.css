@@ -7,3 +7,15 @@
     width: 70vw;
   }
 }
+
+@media (min-width: 1200px) {
+  .img {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1900px) {
+  .img {
+    width: 40vw;
+  }
+}

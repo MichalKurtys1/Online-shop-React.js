@@ -20,8 +20,10 @@ import { getAllItems } from "../lib/api";
 import { imageList } from "../Resource/imageMenager";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../store";
+import { useNavigate } from "react-router";
 
 const DetailPage = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const params = useParams();
   const [isOpen, setIsOpen] = useState(false);
@@ -78,6 +80,7 @@ const DetailPage = () => {
 
   const addItemHandler = () => {
     dispatch(cartActions.addItem(selectedItem[0]));
+    navigate("/cart");
   };
 
   return (
