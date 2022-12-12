@@ -419,6 +419,12 @@
     width: 60%;
   }
 
+  .detailsBox .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .detailsBox .buttons button {
     width: 30%;
     height: auto;
@@ -452,6 +458,9 @@
 @media (min-width: 1600px) {
   .userDetails {
     width: 40%;
+  }
+  .detailsBox .buttons button {
+    width: 25%;
   }
 
   .userDetails img {

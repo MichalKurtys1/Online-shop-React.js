@@ -127,8 +127,12 @@
 
 @media (min-width: 1200px) {
   .choiseBox {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     margin: 15px;
-    width: 65%;
+    width: 90%;
   }
 
   .choiseBox button {
@@ -149,7 +153,9 @@
   }
 
   .logoutBtn {
-    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
     width: 3vw;
     height: 3vw;
   }
@@ -162,8 +168,8 @@
   }
 
   .logoutBtn {
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height: 3vw;
     padding: 10px;
   }
 }

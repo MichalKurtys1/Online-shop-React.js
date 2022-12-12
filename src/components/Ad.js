@@ -1,4 +1,4 @@
-import ad from "../Resource/Ad.png";
+import ad from "../Resource/Ad.jpg";
 import classes from "./Ad.module.css";
 import { NavLink } from "react-router-dom";
 

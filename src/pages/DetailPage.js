@@ -138,7 +138,7 @@ const DetailPage = () => {
             </p>
             {!isOpen && (
               <button onClick={showMoreHandler}>
-                Pokaż więcej{" "}
+                Pokaż więcej
                 <FontAwesomeIcon
                   icon={faAngleDoubleDown}
                   className={classes.icon}

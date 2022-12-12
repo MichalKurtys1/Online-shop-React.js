@@ -149,12 +149,19 @@
   .card {
     width: 15vw;
     height: 35vh;
+    transition: 1s;
   }
 
   .card img {
     width: 20vh;
     height: 20vh;
     border-radius: 150px;
+    transition: 0.2s;
+  }
+
+  .card:hover img {
+    padding: 5px;
+    border: 5px solid #2a91a4;
   }
 
   .text p {
